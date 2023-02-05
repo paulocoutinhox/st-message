@@ -7,6 +7,7 @@ import React, { ReactNode } from "react"
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayerDOM from "./AudioPlayerDOM";
 
 
 
@@ -183,7 +184,7 @@ class Chat extends StreamlitComponentBase {
           msg = <Img onLoad={() => Streamlit.setFrameHeight()} key={i} src={m} isUser={isUser} />
         } else if (isAudio[i]) {
           //msg = <Audio onLoad={() => Streamlit.setFrameHeight()} key={i} src={m} isUser={isUser} controls />
-          msg = <ReactAudioPlayer key={i} src={m} controls />
+          msg = <AudioPlayerDOM key={i} src={m} controls />
         } else {
           msg = <Message isUser={isUser} key={i}>{m}</Message>
         }
@@ -210,7 +211,7 @@ class Chat extends StreamlitComponentBase {
         messages = <Img onLoad={() => Streamlit.setFrameHeight()} src={message} isUser={isUser} key="0" />
       } else if (isAudio) {
         //messages = <Audio onLoad={() => Streamlit.setFrameHeight()} src={message} isUser={isUser} key="0" controls />
-        messages = <ReactAudioPlayer key={0} src={message} controls />
+        messages = <AudioPlayerDOM key={0} src={message} controls />
       } else {
         messages = <Message isUser={isUser} key="0">{message}</Message>
       }
