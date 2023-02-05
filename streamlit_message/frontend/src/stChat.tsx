@@ -60,6 +60,7 @@ class Chat extends StreamlitComponentBase {
       margin: '1px 5px',
       maxWidth: '70%',
       width: 'fit-content',
+      whiteSpace: 'pre-wrap',
     }, (props: { isUser: boolean }) => {
       return css`
         &:first-child {
