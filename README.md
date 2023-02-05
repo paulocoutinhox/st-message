@@ -9,7 +9,7 @@ Authors - [@paulocoutinhox](https://github.com/paulocoutinhox)
 Install this packages with PIP using:
 
 ```bash
-python3 -m pip install pip install git+https://github.com/paulocoutinhox/st-message
+python3 -m pip install git+https://github.com/paulocoutinhox/st-message
 ```
 
 ## Usage
